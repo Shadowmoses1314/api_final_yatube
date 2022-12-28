@@ -53,4 +53,4 @@ class FollowSerializer(serializers.ModelSerializer):
         """Проверяем, что не подписываемся на самого себя."""
         if self.context['request'].user != data.get('following'):
             return data
-        raise serializers.ValidationError("Нельзя подписаться на самого себя")
+        raise serializers.ValidationError('Нельзя подписаться на самого себя')
